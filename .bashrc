@@ -1,0 +1,21 @@
+alias ll='ls -al'
+alias ..='cd ../'
+alias ...='cd ../../'
+alias .2='cd ../../'
+alias .3='cd ../../../'
+alias .4='cd ../../../../'
+alias l='ls'
+alias desk='cd ~/Desktop/'
+alias down='cd ~/Downloads/'
+alias vec1='cd ~/vec1home/'
+alias fumount='sudo diskutil umount force ~/mounting_dir'
+alias fmount='sshfs remote@remote:/remotehomedir/ /Users/winniexu/mounting_dir/'
+alias tbvec1='ssh vec1 -NL 2002:vremote:2002'
+alias tbvec2='ssh vec2 -NL 2003:v:2003'
+alias ga='git add'
+alias gc='git commit -m'
+alias gp='git push'
+
+alias julia='/Applications/Julia-1.3.app/Contents/Resources/julia/bin/julia' # when you're desperate
+
+PS1='\u\[\e[36m\] λ\[\e[36m\]\w `if [ $? = 0 ]; then echo \[\e[33m\]:\)\[\e[37m\]; else echo \[\e[35m\]:\(\[\e[37m\]; fi` '

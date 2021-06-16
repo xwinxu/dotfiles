@@ -1,0 +1,85 @@
+{
+  "workbench.colorTheme": "Material Theme",
+  "materialTheme.accent": "Pink",
+  "terminal.integrated.cursorStyle": "line",
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  "editor.multiCursorModifier": "alt",
+  "editor.formatOnSave": true,
+  "vim.leader": " ",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "leader",
+        "w"
+      ],
+      "commands": [
+        "workbench.action.files.save"
+      ]
+    }
+  ],
+  "vim.handleKeys": {
+    "<D-c>": false,
+    "<D-v>": false,
+  },
+  "terminal.integrated.inheritEnv": false,
+  "editor.minimap.enabled": false,
+  "python.formatting.provider": "yapf",
+  // "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true,
+  // "python.linting.pylintPath": "pylint",
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "files.eol": "\n",
+  "python.formatting.yapfArgs": [
+    "--style",
+    "{based_on_style: google, indent_width: 4, column_limit: 120}"
+  ],
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "emmet.triggerExpansionOnTab": true,
+  "remote.SSH.configFile": "/Users/winniexu/.ssh/config",
+  "python.languageServer": "Jedi",
+  "liveshare.authenticationProvider": "GitHub",
+  "terminal.integrated.shell.linux": "bash",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    },
+    {
+      "viewType": "jupyter-notebook",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "editor.codeActionsOnSave": null,
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "files.eol": "\n",
+  "editor.formatOnSave": true,
+  "python.formatting.yapfArgs": [
+    "--style",
+    "{based_on_style: google, indent_width: 4, column_limit: 120}"
+  ],
+  "python.formatting.provider": "yapf",
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "emmet.triggerExpansionOnTab": true,
+}

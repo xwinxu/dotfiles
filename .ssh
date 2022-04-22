@@ -1,3 +1,4 @@
-Host name
+Host ssh_name
   Hostname ...com
   User username
+  LocalForward 9999 localhost:9999

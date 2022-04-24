@@ -28,8 +28,11 @@ alias tbvec1='ssh vec1 -NL 2002:vremote:2002'
 alias tbvec2='ssh vec2 -NL 2003:v:2003'
 # tensorboard --logdir_spec=1:gs://   
 alias tbdev='tensorboard dev upload --logdir'
-alias tmuxa='tmux attach-session -t'
+# alias tmuxa='tmux attach-session -t'
+# create or attach new session
+alias tmuxa='tmux new -A -s'
 alias tmuxn='tmux new-session -s'
+alias tmuxk='tmux kill-session -t'
 alias pythonb='python -m pdb -c continue'
 alias ga='git add'
 alias gc='git commit -m'

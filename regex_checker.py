@@ -1,4 +1,7 @@
-"""Check if the directories excluded are valid"""
+"""Check if the directories excluded are valid.
+Note: rsync interprets a SOURCE directory with no trailing slash as copy this directory, and a directory/ with a trailing slash as copy the contents of this directory
+e.g. rsync -av --exclude='^.*pycache.*$|^.*vscode.*$|^.*git.*$|^.*pyc.*$' ddpm/ winnie-brain-research/
+"""
 import re
 
 def check_regex(regex_str, test_dirs):

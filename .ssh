@@ -2,3 +2,29 @@ Host ssh_name
   Hostname ...com
   User username
   LocalForward 9999 localhost:9999
+
+Host *
+  ServerAliveInterval 60
+
+# 4 lines here are mac specific
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  # generate this with ssh-keygen and ssh-copy-id to the remote server (or manually paste in public key and set to 600)
+  IdentityFile ~/.ssh/id_rsa
+  
+Host devfair
+  ProxyJump YOUR_JUMPHOST_ADDR
+  Hostname YOUR_MACHINE_IP
+  
+Host devfair-vs
+  Hostname localhost
+  Port 1234
+
+# chmod 600
+Host *fairjmp*
+  IdentityFile ~/.ssh/id_ed25519_fair
+  
+Host devfair*
+  IdentityFile ~/.ssh/id_ed25519_fair
+  ProxyJump ash-fairjmp101

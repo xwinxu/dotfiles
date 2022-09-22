@@ -37,12 +37,12 @@ alias pythonb='python -m pdb -c continue'
 alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push'
+alias src='source ~/.bashrc'
 # scp -r winniexu@address.com:~/some_dir ~/Desktop/destination_dir
 alias julia='/Applications/Julia-1.3.app/Contents/Resources/julia/bin/julia'
 
 PS1='\u\[\e[36m\] λ\[\e[36m\]\w `if [ $? = 0 ]; then echo \[\e[33m\]:\)\[\e[37m\]; else echo \[\e[35m\]:\(\[\e[37m\]; fi` '
 
-alias tcs='ssh xuwinni1@teach.cs.toronto.edu'
-alias auto='ssh od@128.100.201.39 -p 10023'
-alias autotensor='ssh od@128.100.201.39 -p 10023 -L localhost:16008:logstar:6008'
-alias autoim='ssh -X -p 10023 od@128.100.201.39'
+# alias auto='ssh od@128.100.201.39 -p 10023' # for specific port forwarded tensorboard
+# alias autotensor='ssh od@128.100.201.39 -p 10023 -L localhost:16008:logstar:6008'
+# alias autoim='ssh -X -p 10023 od@128.100.201.39' # for XQuartz

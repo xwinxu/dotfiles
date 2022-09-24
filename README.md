@@ -2,8 +2,9 @@
 Configs, setups, etc
 
 ## New Mac Setup
-Type speed: `defaults write NSGlobalDomain KeyRepeat -int 1` with KeyRepeat set to -3 and Delay to fastest in settings.
+Type speed: `defaults write NSGlobalDomain KeyRepeat -int 1` with KeyRepeat set to -3 and Delay to slowest in settings. (more settings: `defaults write -g InitialKeyRepeat -int 10`)
 Scroll speed: fastest in settings.
+Repeat keys turn on: `defaults write -g ApplePressAndHoldEnabled -bool false`
 Dock speed: `defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock`
 
 Install vim plugin manager:

@@ -14,7 +14,7 @@ Install jax according to [this](https://github.com/google/jax/issues/5501#issuec
 % cd jax
 % python build/build.py
 % pip install dist/*.whl
-% pip install -e .
+% pip install -e . # or, pip install /Users/winniexu/jax/dist/jaxlib-0.3.21-cp310-cp310-macosx_11_0_arm64.whl
 ```
 Or update jax first then `pip install jax[cpu] -f https://storage.googleapis.com/jax-releases/jax_releases.html`
 Install scipy: https://github.com/scipy/scipy/issues/13409#issuecomment-824919738

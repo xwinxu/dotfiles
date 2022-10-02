@@ -7,6 +7,19 @@ Scroll speed: fastest in settings.
 Repeat keys turn on: `defaults write -g ApplePressAndHoldEnabled -bool false`
 Dock speed: `defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock`
 
+### M1
+Install jax according to [this](https://github.com/google/jax/issues/5501#issuecomment-903915155) and [this](https://github.com/google/jax/issues/5501#issuecomment-881337136) (resulting wheel is "jaxlib-0.1.70-cp39-none-macosx_11_0_arm64.whl"), so it doesn't look like a x86)
+```
+% git clone https://github.com/google/jax
+% cd jax
+% python build/build.py
+% pip install dist/*.whl
+% pip install -e .
+```
+Or update jax first then `pip install jax[cpu] -f https://storage.googleapis.com/jax-releases/jax_releases.html`
+Install scipy: https://github.com/scipy/scipy/issues/13409#issuecomment-824919738
+Homebrew install: `% arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
+
 Install vim plugin manager:
 ```
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \

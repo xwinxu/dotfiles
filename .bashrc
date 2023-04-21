@@ -1,3 +1,9 @@
+# slurm
+alias gpuavail='sgpu -g atlas' # --verbose
+alias pstatu='pestat -u winniexu'
+# showalloc <partition>
+
+# general
 alias ll='ls -al'
 alias ..='cd ../'
 alias ...='cd ../../'

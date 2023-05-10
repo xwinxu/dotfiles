@@ -13,9 +13,16 @@ Host *
   # generate this with ssh-keygen and ssh-copy-id to the remote server (or manually paste in public key and set to 600)
   IdentityFile ~/.ssh/id_rsa
   
-Host devfair
-  ProxyJump YOUR_JUMPHOST_ADDR
-  Hostname YOUR_MACHINE_IP
+Host jump_host
+    HostName jump_host_ip_address
+    User username
+    IdentityFile ~/.ssh/id_rsa
+
+Host private_server
+    HostName private_server_ip_address
+    User private_server_username
+    IdentityFile ~/.ssh/id_rsa
+    ProxyCommand ssh -W %h:%p jump_host
   
 Host devfair-vs
   Hostname localhost

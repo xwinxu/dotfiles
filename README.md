@@ -15,6 +15,7 @@ echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/****/.zprofile
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/****/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
+Set up [`tmux`](https://github.com/gpakosz/.tmux) and `brew install 
 
 Install jax according to [this](https://github.com/google/jax/issues/5501#issuecomment-903915155) and [this](https://github.com/google/jax/issues/5501#issuecomment-881337136) (resulting wheel is "jaxlib-0.1.70-cp39-none-macosx_11_0_arm64.whl"), so it doesn't look like a x86)
 ```

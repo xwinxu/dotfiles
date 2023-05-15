@@ -11,11 +11,11 @@ Dock speed: `defaults write com.apple.dock autohide-time-modifier -int 0;killall
 Install homebrew and zsh
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/****/.zprofile
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/****/.zprofile
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/winniexu/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/winniexu/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
-Set up [`tmux`](https://github.com/gpakosz/.tmux) and `brew install 
+Set up [`tmux`](https://github.com/gpakosz/.tmux) and `brew install reattach-to-user-namespace`
 
 Install jax according to [this](https://github.com/google/jax/issues/5501#issuecomment-903915155) and [this](https://github.com/google/jax/issues/5501#issuecomment-881337136) (resulting wheel is "jaxlib-0.1.70-cp39-none-macosx_11_0_arm64.whl"), so it doesn't look like a x86)
 ```

@@ -58,3 +58,8 @@ Then `:wq` to exit, reopen vim and run:
 
 ## References
 [vundle](https://www.jianshu.com/p/f0513d18742a)
+
+Request interactive shell on slurm:
+```
+srun --time=02:00:00 --partition=atlas --gres=gpu:1 --mem=8G --cpus-per-task=4 --pty bash
+```

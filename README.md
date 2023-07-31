@@ -56,6 +56,9 @@ Then `:wq` to exit, reopen vim and run:
 - Delete plugin: `:PluginUpdate`
 - Add plugin: `:PluginInstall`
 
+## Research
+Bash install: [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+
 ## References
 [vundle](https://www.jianshu.com/p/f0513d18742a)
 

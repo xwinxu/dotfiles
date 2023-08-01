@@ -38,9 +38,12 @@ or [Vundle](https://github.com/VundleVim/Vundle.vim)
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
+
+Install python: `brew install python`
+
 For YCM:
 ```
-brew install macvim # optional 
+brew install macvim # optional, make sure no conflicts with regular vim which may also be aliased -- unlink one of em
 brew install cmake python go nodejs
 cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --clang-interpreter # no need --all
@@ -55,6 +58,8 @@ let g:ycm_python_binary_path='/usr/bin/python3'
 Then `:wq` to exit, reopen vim and run:
 - Delete plugin: `:PluginUpdate`
 - Add plugin: `:PluginInstall`
+
+Install [wget](https://blog.eldernode.com/install-and-use-tmux-on-macos/)
 
 ## Research
 Bash install: [Miniconda](https://docs.conda.io/en/latest/miniconda.html)

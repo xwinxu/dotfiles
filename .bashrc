@@ -47,7 +47,8 @@ alias src='source ~/.bashrc'
 # scp -r winniexu@address.com:~/some_dir ~/Desktop/destination_dir
 alias julia='/Applications/Julia-1.3.app/Contents/Resources/julia/bin/julia'
 
-PS1='\u\[\e[36m\] λ\[\e[36m\]\w `if [ $? = 0 ]; then echo \[\e[33m\]:\)\[\e[37m\]; else echo \[\e[35m\]:\(\[\e[37m\]; fi` '
+# \u@\h
+PS1='\h\[\e[36m\] λ\[\e[36m\]\w `if [ $? = 0 ]; then echo \[\e[33m\]:\)\[\e[37m\]; else echo \[\e[35m\]:\(\[\e[37m\]; fi` '
 
 alias ck='cd /checkpoint/winniexu/'
 # watch -n 5 "squeue -u $USER --format='%.8F %5P %.60j %.2t %.5M %.5D %.5N %.5b %.3E' --sort=+i | grep <>"

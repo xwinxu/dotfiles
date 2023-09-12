@@ -7,7 +7,7 @@ Scroll speed: fastest in settings.
 Repeat keys turn on: `defaults write -g ApplePressAndHoldEnabled -bool false`
 Dock speed: `defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock`
 
-### M1
+### M1/2
 Install homebrew and zsh
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -63,6 +63,9 @@ Install [wget](https://blog.eldernode.com/install-and-use-tmux-on-macos/)
 
 ## Research
 Bash install: [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+
+Tmux install: [oh my tmux](https://github.com/gpakosz/.tmux)
+- but if want my basic config, just cp .tmux.conf to $HOME
 
 ## References
 [vundle](https://www.jianshu.com/p/f0513d18742a)

@@ -6,6 +6,40 @@ Host ssh_name
 Host *
   ServerAliveInterval 60
 
+# Directly access the compute nodes via dojo as proxy
+Host dojo-*
+    User winnie
+    ProxyJump dojo
+    ForwardAgent yes
+
+Host winnie
+    HostName dojo
+    User winnie
+    ForwardAgent yes
+
+# TODO: change these based on the node you requested
+#  StrictHostKeyChecking no -- don't do this, on server run keygen on the server ssh-keygen -R nodename:q
+Host dojo-a3-ghpc-1
+    HostName dojo-a3-ghpc-1
+    User winnie
+
+# Directly access the compute nodes via dojo as proxy
+Host dojo
+  HostName dojo
+  User winnie
+  ForwardAgent yes
+  IdentityFile ~/.ssh/id_rsa
+
+Host *
+    AddKeysToAgent yes
+    UseKeychain yes
+    # generate this with ssh-keygen and ssh-copy-id to the remote server (or manually paste in public key and set to 600)
+    # i.e. on local machine ssh-copy-id username@hostname
+    IdentityFile ~/.ssh/id_rsa
+
+Host *
+    ServerAliveInterval 240
+
 # 4 lines here are mac specific
 Host *
   AddKeysToAgent yes

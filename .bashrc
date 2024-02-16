@@ -1,6 +1,7 @@
 # slurm
 alias gpuavail='sgpu -g atlas' # --verbose
 alias pstatu='pestat -u winniexu'
+alias search='grep -rnw . -e' # search for a string in all files
 # showalloc <partition>
 
 # general

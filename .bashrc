@@ -4,6 +4,14 @@ alias pstatu='pestat -u winniexu'
 alias search='grep -rnw . -e' # search for a string in all files
 # showalloc <partition>
 
+# works if not using tmux, must manually join each job id and will be persistent on ssh disconnect
+alias salc1="salloc --no-shell --partition=g2dev --nodes=1 --ntasks-per-node=1 --cpus-per-task=5 --gres=gpu:1 --time=12:00:00 bash"
+alias salc2="salloc --no-shell --partition=g2dev --nodes=1 --ntasks-per-node=1 --cpus-per-task=10 --gres=gpu:2 --time=12:00:00 bash"
+function joinjob() { srun --overlap --pty --jobid "$1" bash; }
+# works if using tmux
+alias sint1="srun --pty --partition=g2dev --nodes=1 --ntasks-per-node=1 --cpus-per-task=5 --gres=gpu:1 --time=12:00:00 bash"
+alias sint2="srun --pty --partition=g2dev --nodes=1 --ntasks-per-node=1 --cpus-per-task=10 --gres=gpu:2 --time=12:00:00 bash"
+
 # general
 alias ll='ls -al'
 alias ..='cd ../'
@@ -65,7 +73,6 @@ alias sr2='srun --gres=gpu:1 --mem=20G -p p100 ' # -q nopreemption '
 alias srcpu='srun -p cpu --qos nopreemption --mem 40G --mincpu 4 --pty bash'
 alias sr2t4='srun --gres=gpu:1 --mem=28G -p t4v2 -q normal ' # preemption
 alias sint='srun --gres=gpu:1 --mem=40G -p interactive -q nopreemption --pty bash '
-alias sint2='srun --gres=gpu:2 --mem=40G -p interactive -q nopreemption --pty bash '
 alias sintrtx='srun --gres=gpu:1 --mem=40G -p rtx6000 -q normal --pty bash'
 alias sintrtx2='srun --gres=gpu:2 --mem=40G -p rtx6000 -q normal --pty bash'
 alias sintrtx4='srun --gres=gpu:4 --mem=40G -p rtx6000 -q normal --pty bash'

@@ -38,6 +38,8 @@ alias fumount='sudo diskutil umount force ~/mtpt'
 alias fmount='sshfs winniexu@v.vectorinstitute.ai:/scratch/ssd001/home/winniexu/ /Users/winniexu/mtpt/'
 #alias ckmount='sshfs winniexu@v.vectorinstitute.ai:/checkpoint/winniexu/ /Users/winniexu/ckpt/'
 alias ckmount='sshfs winniexu@v.vectorinstitute.ai:/checkpoint/winniexu/icml/ /Users/winniexu/ckpt/'
+# launch sbatch / salloc inside an interactive slurm allocation (not login node) and prevent cpu bind request error:
+alias sbatch_anywhere="SLURM_STEP_NUM_TASKS= SLURM_JOB_USER= SLURM_TASKS_PER_NODE= SLURM_JOB_UID= SLURM_STEP_GPUS= SLURM_CPU_BIND= SLURM_TASK_PID= SLURM_LOCALID= SLURM_CPU_BIND_VERBOSE= SLURMD_NODENAME= SLURM_JOB_START_TIME= SLURM_STEP_NODELIST= SLURM_JOB_END_TIME= SLURM_CPUS_ON_NODE= SLURM_UMASK= SLURM_JOB_CPUS_PER_NODE= SLURM_GPUS_ON_NODE= SLURM_GTIDS= SLURM_JOB_PARTITION= SLURM_STEPID= SLURM_CPU_BIND_LIST= SLURM_JOBID= SLURM_PTY_PORT= SLURM_LAUNCH_NODE_IPADDR= SLURM_PTY_WIN_ROW= SLURM_CPU_BIND_TYPE= SLURMD_DEBUG= SLURM_PROCID= SLURM_NTASKS= SLURM_TOPOLOGY_ADDR= SLURM_DISTRIBUTION= SLURM_TOPOLOGY_ADDR_PATTERN= SLURM_SRUN_COMM_HOST= SLURM_WORKING_CLUSTER= SLURM_PTY_WIN_COL= SLURM_NODELIST= SLURM_SRUN_COMM_PORT= SLURM_STEP_ID= SLURM_PRIO_PROCESS= SLURM_NPROCS= SLURM_NNODES= SLURM_JOB_ID= SLURM_NODEID= SLURM_STEP_NUM_NODES= SLURM_STEP_TASKS_PER_NODE= SLURM_CONF= SLURM_JOB_NAME= SLURM_STEP_LAUNCHER_PORT= SLURM_JOB_GID= SLURM_JOB_NODELIST= sbatch"
 alias ckumount='sudo diskutil umount force ~/ckpt'
 alias tbvec1='ssh vec1 -NL 2002:vremote:2002'
 alias tbvec2='ssh vec2 -NL 2003:v:2003'

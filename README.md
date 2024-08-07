@@ -66,6 +66,7 @@ Bash install: [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 
 Tmux install: [oh my tmux](https://github.com/gpakosz/.tmux)
 - but if want my basic config, just cp .tmux.conf to $HOME
+brew install MisterTea/et/et to prevent ssh'ing to login node: `et <username>@login:2022`
 
 ## References
 [vundle](https://www.jianshu.com/p/f0513d18742a)

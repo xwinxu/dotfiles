@@ -2,8 +2,8 @@
 Configs, setups, etc
 
 ## New Mac Setup
-Type speed: `defaults write NSGlobalDomain KeyRepeat -int 1` with KeyRepeat set to -3 and Delay to slowest in settings. (more settings: `defaults write -g InitialKeyRepeat -int 10`)
-Scroll speed: fastest in settings.
+Type / backspace speed: `defaults write NSGlobalDomain KeyRepeat -int 1` (then `sudo reboot`) with KeyRepeat set to slowest and Delay until repeat to shortest in settings. (more settings: `defaults write -g InitialKeyRepeat -int 10`).
+In settings: 1) Scroll speed: fastest. Trackpad speed: one less than fastest + light click + tap to click.
 Repeat keys turn on: `defaults write -g ApplePressAndHoldEnabled -bool false`
 Dock speed: `defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock`
 
